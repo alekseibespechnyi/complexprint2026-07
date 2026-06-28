@@ -35,31 +35,43 @@ const CATEGORIES = [
     Icon: Server,
     title: 'Системные блоки и моноблоки',
     text: 'Готовые офисные ПК, моноблоки и рабочие станции под любые задачи: офис, бухгалтерия, проектирование, графика.',
+    image: '/images/pc-workstation.png',
+    imgClass: 'object-contain bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900',
   },
   {
     Icon: Cpu,
     title: 'Процессоры Intel и AMD',
     text: 'Полная линейка CPU: от Intel Core i3 до Xeon, от AMD Ryzen 3 до Threadripper. Подбор под материнскую плату.',
+    image: '/images/pc-cpu-intel-amd.webp',
+    imgClass: 'object-cover',
   },
   {
     Icon: CircuitBoard,
     title: 'Материнские платы',
     text: 'Платы Gigabyte, ASUS, MSI и ASRock для всех современных сокетов. Гарантия совместимости с CPU и RAM.',
+    image: '/images/pc-motherboard.webp',
+    imgClass: 'object-contain bg-gradient-to-br from-slate-100 to-slate-200',
   },
   {
     Icon: HardDrive,
     title: 'SSD и HDD накопители',
     text: 'NVMe и SATA SSD до 8 ТБ, серверные и десктопные HDD Seagate, WD. Резервное копирование «под ключ».',
+    image: '/images/pc-ssd.avif',
+    imgClass: 'object-cover',
   },
   {
     Icon: Monitor,
     title: 'Мониторы',
     text: 'Офисные и профессиональные мониторы BenQ, Acer, Lenovo, Dell. Диагонали 22"–34", IPS, 4K, изогнутые.',
+    image: '/images/pc-monitor.webp',
+    imgClass: 'object-cover',
   },
   {
     Icon: MemoryStick,
     title: 'Видеокарты и оперативная память',
     text: 'GPU NVIDIA и AMD для офиса, дизайнеров и инженеров. DDR4/DDR5 от Kingston, Crucial, Corsair.',
+    image: '/images/pc-videocard.avif',
+    imgClass: 'object-cover',
   },
 ];
 
@@ -300,17 +312,36 @@ const ComputersAndParts = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {CATEGORIES.map(({ Icon, title, text }) => (
+              {CATEGORIES.map(({ Icon, title, text, image, imgClass }) => (
                 <div
                   key={title}
                   data-testid={`category-card-${title}`}
-                  className="group bg-white rounded-2xl p-7 border border-slate-100 shadow-[0_4px_20px_-8px_rgba(2,6,23,0.06)] hover:shadow-[0_20px_50px_-15px_rgba(37,99,235,0.25)] hover:-translate-y-1 transition-all duration-300"
+                  className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-[0_4px_20px_-8px_rgba(2,6,23,0.06)] hover:shadow-[0_20px_50px_-15px_rgba(37,99,235,0.25)] hover:-translate-y-1 transition-all duration-300 flex flex-col"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-4 shadow-[0_8px_20px_-8px_rgba(37,99,235,0.6)] group-hover:scale-110 transition-transform duration-300">
-                    <Icon size={22} className="text-white" />
+                  {image ? (
+                    <div className="relative h-48 overflow-hidden bg-slate-50">
+                      <img
+                        src={image}
+                        alt={title}
+                        loading="lazy"
+                        decoding="async"
+                        className={`absolute inset-0 w-full h-full ${imgClass || 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
+                      />
+                      <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-md">
+                        <Icon size={18} className="text-blue-600" />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 flex items-center justify-center">
+                      <Icon size={64} className="text-white/95 drop-shadow-lg" strokeWidth={1.4} />
+                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
+                      <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-cyan-200/20 rounded-full blur-2xl" />
+                    </div>
+                  )}
+                  <div className="p-7 flex-1 flex flex-col">
+                    <h4 className="font-bold text-slate-900 text-lg mb-2">{title}</h4>
+                    <p className="text-[14px] text-slate-600 leading-relaxed">{text}</p>
                   </div>
-                  <h4 className="font-bold text-slate-900 text-lg mb-2">{title}</h4>
-                  <p className="text-[14px] text-slate-600 leading-relaxed">{text}</p>
                 </div>
               ))}
             </div>
