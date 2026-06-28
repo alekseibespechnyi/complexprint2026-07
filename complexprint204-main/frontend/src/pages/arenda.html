@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда МФУ Kyocera ECOSYS M2035dn в Москве — ComplexPrint</title>
+    <meta name="description" content="Аренда МФУ Kyocera ECOSYS M2035dn в Москве с обслуживанием и без. От 2000 ₽/мес. Доставка, установка, картриджи, ремонт. Осталось 40 штук!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        /* Section titles */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1a5276;
+            margin: 50px 0 30px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Pricing cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid #e74c3c;
+        }
+
+        .pricing-card.popular::before {
+            content: 'ПОПУЛЯРНО';
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: #1a5276;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        .price {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .price-value {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #e74c3c;
+            line-height: 1;
+        }
+
+        .price-value span {
+            font-size: 1rem;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #bdc3c7;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid #f8f9fa;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .features-list li.not-included {
+            color: #bdc3c7;
+        }
+
+        .features-list li.not-included::before {
+            content: '✕';
+            color: #e74c3c;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            transform: scale(1.02);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #2980b9;
+            border: 2px solid #2980b9;
+        }
+
+        .btn-outline:hover {
+            background: #2980b9;
+            color: white;
+        }
+
+        /* Specs section */
+        .specs-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .spec-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2980b9 0%, #1a5276 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .spec-text h4 {
+            color: #1a5276;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .spec-text p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Terms section */
+        .terms-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .term-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .term-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .term-item h4 {
+            color: #1a5276;
+            margin-bottom: 8px;
+        }
+
+        .term-item p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Why us */
+        .why-us {
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-left: 4px solid #2980b9;
+        }
+
+        .benefit-card h4 {
+            color: #1a5276;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .benefit-card p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        /* CTA section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn-white {
+            background: white;
+            color: #1a5276;
+        }
+
+        .cta-btn-white:hover {
+            background: #ecf0f1;
+            transform: scale(1.05);
+        }
+
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn-outline:hover {
+            background: white;
+            color: #1a5276;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            .price-value {
+                font-size: 2.2rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Microdata for SEO */
+        .hidden-microdata {
+            display: none;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Аренда МФУ Kyocera ECOSYS M2035dn</h1>
+            <p class="subtitle">Надёжные лазерные многофункциональные устройства для вашего офиса</p>
+            <p class="subtitle">Доставка по Москве • Установка за 2 часа • Работаем с юрлицами и ИП</p>
+            <span class="badge">⚡ Осталось 40 штук — успейте забронировать!</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Pricing Section -->
+        <h2 class="section-title">Тарифы на аренду</h2>
+        <p class="section-subtitle">Выберите подходящий вариант. Все тарифы без скрытых платежей.</p>
+
+        <div class="pricing-grid">
+            <!-- Card 1: Только аппарат -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3 class="card-title">Только аппарат</h3>
+                    <p class="card-desc">Для тех, у кого есть свой сервис</p>
+                </div>
+                <div class="price">
+                    <div class="price-old">2 500 ₽/мес.</div>
+                    <div class="price-value">2 000 <span>₽/мес.</span></div>
+                </div>
+                <ul class="features-list">
+                    <li>МФУ Kyocera ECOSYS M2035dn</li>
+                    <li>Доставка и установка</li>
+                    <li>Настройка под сеть</li>
+                    <li>Гарантия 12 месяцев</li>
+                    <li class="not-included">Картриджи не включены</li>
+                    <li class="not-included">Обслуживание и ремонт — за счёт арендатора</li>
+                    <li class="not-included">Техническая поддержка — платно</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Оставить заявку</a>
+            </div>
+
+            <!-- Card 2: Всё включено -->
+            <div class="pricing-card popular">
+                <div class="card-header">
+                    <h3 class="card-title">Всё включено</h3>
+                    <p class="card-desc">Полный спектр услуг — никаких забот</p>
+                </div>
+                <div class="price">
+                    <div class="price-old">4 500 ₽/мес.</div>
+                    <div class="price-value">3 500 <span>₽/мес.</span></div>
+                </div>
+                <ul class="features-list">
+                    <li>МФУ Kyocera ECOSYS M2035dn</li>
+                    <li>Доставка и установка бесплатно</li>
+                    <li>Настройка под сеть и Wi-Fi</li>
+                    <li>✅ Картриджи включены (до 7 200 стр./мес.)</li>
+                    <li>✅ Техническое обслуживание</li>
+                    <li>✅ Ремонт и замена деталей</li>
+                    <li>✅ Подменный аппарат при поломке (в течение 24 ч)</li>
+                    <li>✅ Техническая поддержка 24/7</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+            </div>
+
+            <!-- Card 3: Покопийная аренда -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3 class="card-title">Покопийная аренда</h3>
+                    <p class="card-desc">Платите только за то, что печатаете</p>
+                </div>
+                <div class="price">
+                    <div class="price-old">2 000 ₽ + 1 ₽/стр.</div>
+                    <div class="price-value">1 500 <span>₽/мес. + 0,6 ₽/стр.</span></div>
+                </div>
+                <ul class="features-list">
+                    <li>МФУ Kyocera ECOSYS M2035dn</li>
+                    <li>Доставка и установка бесплатно</li>
+                    <li>Настройка под сеть</li>
+                    <li>✅ Картриджи — по факту печати</li>
+                    <li>✅ Техническое обслуживание</li>
+                    <li>✅ Ремонт и замена деталей</li>
+                    <li>✅ Подменный аппарат при поломке</li>
+                    <li>✅ Ежемесячный отчёт о печати</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Оставить заявку</a>
+            </div>
+        </div>
+
+        <!-- Specs Section -->
+        <h2 class="section-title">Технические характеристики</h2>
+        <p class="section-subtitle">Kyocera ECOSYS M2035dn — проверенное временем решение для офиса</p>
+
+        <div class="specs-section">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-icon">🖨️</div>
+                    <div class="spec-text">
+                        <h4>Печать</h4>
+                        <p>Лазерная, ч/б, 1200×1200 dpi, скорость 35 стр./мин</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">📄</div>
+                    <div class="spec-text">
+                        <h4>Форматы</h4>
+                        <p>A4, A5, B5, Letter, Legal. Автоподатчик на 50 листов</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">📠</div>
+                    <div class="spec-text">
+                        <h4>Копирование</h4>
+                        <p>До 999 копий, масштабирование 25–400%, режимы экспозиции</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">📧</div>
+                    <div class="spec-text">
+                        <h4>Сканирование</h4>
+                        <p>Цветное, 600 dpi, скорость 35 стр./мин (ч/б), 14 стр./мин (цвет)</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">💾</div>
+                    <div class="spec-text">
+                        <h4>Память</h4>
+                        <p>512 МБ стандартно, поддержка USB-флешек</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">🌐</div>
+                    <div class="spec-text">
+                        <h4>Сетевые функции</h4>
+                        <p>Ethernet, Wi-Fi (опционально), печать по сети, сканирование на e-mail/FTP</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">🔄</div>
+                    <div class="spec-text">
+                        <h4>Дуплекс</h4>
+                        <p>Автоматическая двусторонняя печать и копирование</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">♻️</div>
+                    <div class="spec-text">
+                        <h4>Экологичность</h4>
+                        <p>Energy Star 2013, Blue Angel 2013, силиконовый барабан с большим ресурсом</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terms Section -->
+        <h2 class="section-title">Условия аренды</h2>
+        <p class="section-subtitle">Прозрачные правила без подводных камней</p>
+
+        <div class="terms-section">
+            <div class="terms-grid">
+                <div class="term-item">
+                    <div class="term-icon">📅</div>
+                    <h4>Минимальный срок</h4>
+                    <p>От 1 месяца для юрлиц и ИП.<br>Рекомендуем 3 месяца со скидкой 10%.</p>
+                </div>
+                <div class="term-item">
+                    <div class="term-icon">💳</div>
+                    <h4>Оплата</h4>
+                    <p>Безналичный расчёт для юрлиц.<br>Предоплата за 1 месяц.</p>
+                </div>
+                <div class="term-item">
+                    <div class="term-icon">🚚</div>
+                    <h4>Доставка</h4>
+                    <p>Бесплатно в пределах МКАД.<br>За МКАД — от 500 ₽.</p>
+                </div>
+                <div class="term-item">
+                    <div class="term-icon">🔧</div>
+                    <h4>Гарантия</h4>
+                    <p>Подмена при поломке в течение 24 часов.<br>Ремонт в сервис-центре.</p>
+                </div>
+                <div class="term-item">
+                    <div class="term-icon">📋</div>
+                    <h4>Договор</h4>
+                    <p>Официальный договор аренды.<br>Акты приёма-передачи.</p>
+                </div>
+                <div class="term-item">
+                    <div class="term-icon">🏢</div>
+                    <h4>Объёмные скидки</h4>
+                    <p>От 5 шт. — скидка 5%<br>От 10 шт. — скидка 10%<br>От 20 шт. — скидка 15%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Us -->
+        <h2 class="section-title">Почему выбирают нас</h2>
+        <p class="section-subtitle">ComplexPrint — сервисный центр с 10-летним опытом</p>
+
+        <div class="why-us">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>⚡ Быстрая доставка</h4>
+                    <p>Доставим и настроим оборудование в день заявки. Работаем по всей Москве и области.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>🔧 Собственный сервис</h4>
+                    <p>Штатные инженеры, запчасти и картриджи всегда в наличии. Ремонт не дольше 1 дня.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>💰 Прозрачные цены</h4>
+                    <p>Никаких скрытых платежей. Все условия прописаны в договоре.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>📞 Поддержка 24/7</h4>
+                    <p>Техническая консультация по телефону и удалённая диагностика.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>🔄 Гибкие условия</h4>
+                    <p>Возможность смены тарифа, досрочного расторжения по согласованию.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>🏆 Проверенное оборудование</h4>
+                    <p>Все аппараты прошли полное ТО, заменены износившиеся детали.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section" id="contact">
+            <h2>Готовы сэкономить на печати?</h2>
+            <p>Оставьте заявку — перезвоним в течение 15 минут и подберём оптимальный тариф</p>
+            <div class="cta-buttons">
+                <a href="tel:+74951234567" class="cta-btn cta-btn-white">📞 Позвонить</a>
+                <a href="mailto:info@complexprint.ru" class="cta-btn cta-btn-outline">✉️ Написать на почту</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
+                Или напишите в WhatsApp / Telegram: <strong>+7 (XXX) XXX-XX-XX</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 ComplexPrint — ремонт и аренда оргтехники в Москве</p>
+            <p style="margin-top: 8px;">
+                <a href="https://complexprint.ru">complexprint.ru</a> | 
+                Ремонт принтеров HP, Canon, Brother, Kyocera, Xerox, Ricoh
+            </p>
+        </div>
+    </footer>
+
+    <!-- Schema.org Microdata -->
+    <div class="hidden-microdata" itemscope itemtype="https://schema.org/Product">
+        <span itemprop="name">Аренда МФУ Kyocera ECOSYS M2035dn</span>
+        <span itemprop="description">Аренда многофункционального устройства Kyocera ECOSYS M2035dn в Москве с обслуживанием и без.</span>
+        <span itemprop="brand" itemscope itemtype="https://schema.org/Brand">
+            <span itemprop="name">Kyocera</span>
+        </span>
+        <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <span itemprop="lowPrice">2000</span>
+            <span itemprop="highPrice">4500</span>
+            <span itemprop="priceCurrency">RUB</span>
+            <span itemprop="availability">https://schema.org/InStock</span>
+        </div>
+    </div>
+
+</body>
+</html>
