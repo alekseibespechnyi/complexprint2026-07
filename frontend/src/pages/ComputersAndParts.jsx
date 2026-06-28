@@ -75,7 +75,20 @@ const CATEGORIES = [
   },
 ];
 
-const BRANDS = ['Intel', 'AMD', 'ASUS', 'Gigabyte', 'MSI', 'Acer', 'Lenovo', 'BenQ', 'Dell', 'Seagate', 'Kingston', 'Crucial'];
+const BRANDS = [
+  { name: 'Intel', logo: '/images/brands/intel.svg' },
+  { name: 'AMD', logo: '/images/brands/amd.svg' },
+  { name: 'ASUS', logo: '/images/brands/asus.svg' },
+  { name: 'Gigabyte', logo: null, color: '#E32D22' },
+  { name: 'MSI', logo: '/images/brands/msi.svg' },
+  { name: 'Acer', logo: '/images/brands/acer.svg' },
+  { name: 'Lenovo', logo: '/images/brands/lenovo.svg' },
+  { name: 'BenQ', logo: null, color: '#9F58A3' },
+  { name: 'Dell', logo: '/images/brands/dell.svg' },
+  { name: 'Seagate', logo: '/images/brands/seagate.svg' },
+  { name: 'Kingston', logo: '/images/brands/kingston.svg' },
+  { name: 'Crucial', logo: null, color: '#1A1A1A' },
+];
 
 const WHY_US = [
   {
@@ -363,14 +376,31 @@ const ComputersAndParts = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              {BRANDS.map((brand) => (
-                <span
-                  key={brand}
-                  className="px-5 py-2.5 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold text-[14px] hover:border-blue-300 hover:text-blue-600 hover:shadow-md transition-all duration-200"
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+              {BRANDS.map(({ name, logo, color }) => (
+                <div
+                  key={name}
+                  data-testid={`brand-${name}`}
+                  className="group h-24 bg-white border border-slate-200 rounded-2xl flex items-center justify-center px-4 hover:border-blue-300 hover:shadow-[0_8px_24px_-8px_rgba(37,99,235,0.25)] hover:-translate-y-0.5 transition-all duration-300"
+                  title={name}
                 >
-                  {brand}
-                </span>
+                  {logo ? (
+                    <img
+                      src={logo}
+                      alt={`${name} logo`}
+                      loading="lazy"
+                      decoding="async"
+                      className="max-h-10 max-w-[110px] object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                    />
+                  ) : (
+                    <span
+                      className="font-black text-2xl tracking-tight grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                      style={{ color: color || '#0f172a', fontFamily: 'system-ui, sans-serif' }}
+                    >
+                      {name}
+                    </span>
+                  )}
+                </div>
               ))}
             </div>
           </div>
