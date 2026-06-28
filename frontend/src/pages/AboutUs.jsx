@@ -1,8 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Phone } from "lucide-react";
+import { Phone, Monitor, Video, ArrowRight, Cpu, Wifi, Eye, ShieldCheck } from "lucide-react";
 import { useRepairRequestModal } from "../components/RepairRequestModal";
 
 export default function AboutUs() {
@@ -30,10 +31,10 @@ export default function AboutUs() {
   return (
     <>
       <Helmet>
-        <title>О нас - Сервисное обслуживание печатной техники | ComplexPrint</title>
+        <title>О нас — Сервис, компьютеры и видеонаблюдение | ComplexPrint</title>
         <meta
           name="description"
-          content="Complexprint.ru — лидер по ремонту и обслуживанию печатного оборудования в России. Более 15 лет опыта, бесплатный выезд мастера, гарантия на все работы."
+          content="Complexprint.ru — лидер по обслуживанию печатной техники в России. Также продаём компьютеры и комплектующие (Intel, AMD, ASUS, Gigabyte) и устанавливаем системы видеонаблюдения Live webcams. 15+ лет опыта."
         />
         <link rel="canonical" href="https://complexprint.ru/about-us" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -73,6 +74,12 @@ export default function AboutUs() {
               Мы в Complexprint.ru понимаем это как никто другой. Вот уже более <strong>15 лет</strong> мы обеспечиваем 
               бесперебойную работу печатного парка для крупнейших компаний России, становясь их надежным 
               технологическим партнером.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mt-4">
+              Со временем мы расширили сферу деятельности: теперь поставляем
+              <strong> компьютеры и комплектующие</strong> от Intel, AMD, ASUS, Gigabyte, Lenovo, Dell
+              и устанавливаем <strong>Live webcams</strong> — системы видеонаблюдения для офисов, складов
+              и торговых точек. ComplexPrint — единый IT-партнёр для вашего бизнеса.
             </p>
           </section>
 
@@ -156,6 +163,106 @@ export default function AboutUs() {
                       «по факту». Финансовая честность — наш принцип.
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* New Directions: PC + Live webcams */}
+          <section className="mb-12">
+            <div className="text-center mb-8">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-purple-100 border border-purple-200/60 text-purple-700 text-[13px] font-semibold mb-4">
+                Новые направления
+              </span>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Мы не только печатная техника
+              </h2>
+              <p className="text-gray-600 mt-3 text-lg max-w-2xl mx-auto">
+                За 15 лет компания выросла из сервисного центра в полноценного IT-партнёра.
+                Сегодня мы поставляем компьютерное оборудование и системы видеонаблюдения «под ключ».
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* PC card */}
+              <Link
+                to="/komputery-i-komplektuyushchie"
+                data-testid="about-direction-computers"
+                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-purple-200 block"
+              >
+                <div className="flex items-start gap-5">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-[0_8px_20px_-8px_rgba(168,85,247,0.6)] group-hover:scale-110 transition-transform duration-300">
+                    <Monitor className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Компьютеры и комплектующие
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Системные блоки, моноблоки, рабочие станции, процессоры Intel и AMD,
+                      материнские платы, SSD/HDD, мониторы, видеокарты и оперативная память.
+                      Подбор инженером, доставка по РФ и B2B-условия с отсрочкой.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {['Intel', 'AMD', 'ASUS', 'Gigabyte', 'Lenovo', 'Dell'].map((b) => (
+                        <span key={b} className="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 text-[12px] font-semibold border border-purple-100">
+                          {b}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 text-purple-700 font-semibold text-[14px] group-hover:gap-2.5 transition-all">
+                      Перейти в каталог
+                      <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 flex gap-1.5 opacity-30 group-hover:opacity-60 transition-opacity">
+                  <Cpu size={16} className="text-purple-400" />
+                </div>
+              </Link>
+
+              {/* Live webcams card */}
+              <div
+                data-testid="about-direction-webcams"
+                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-pink-200"
+              >
+                <div className="flex items-start gap-5">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center shadow-[0_8px_20px_-8px_rgba(236,72,153,0.6)] group-hover:scale-110 transition-transform duration-300">
+                    <Video className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Live webcams — системы видеонаблюдения
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Подбор, поставка и монтаж IP-камер для офисов, складов и торговых точек.
+                      Онлайн-трансляция, удалённый доступ со смартфона, видеоархив и интеграция
+                      с системами безопасности.
+                    </p>
+                    <ul className="space-y-1.5 mb-4">
+                      {[
+                        { Icon: Eye, text: 'Просмотр в реальном времени из любой точки' },
+                        { Icon: Wifi, text: 'Wi-Fi и PoE камеры HD/4K' },
+                        { Icon: ShieldCheck, text: 'Монтаж «под ключ» с гарантией' },
+                      ].map(({ Icon, text }) => (
+                        <li key={text} className="flex items-center gap-2 text-[14px] text-gray-700">
+                          <Icon size={14} className="text-pink-500 flex-shrink-0" />
+                          {text}
+                        </li>
+                      ))}
+                    </ul>
+                    <button
+                      onClick={scrollToRepairForm}
+                      data-testid="about-webcams-cta"
+                      className="inline-flex items-center gap-1.5 text-pink-600 font-semibold text-[14px] hover:text-pink-700 hover:gap-2.5 transition-all"
+                    >
+                      Получить расчёт
+                      <ArrowRight size={16} />
+                    </button>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 flex gap-1.5 opacity-30 group-hover:opacity-60 transition-opacity">
+                  <Video size={16} className="text-pink-400" />
                 </div>
               </div>
             </div>
