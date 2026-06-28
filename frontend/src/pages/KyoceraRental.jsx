@@ -34,6 +34,7 @@ import Header from '../components/Header';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { Button } from '../components/ui/button';
 import { useRepairRequestModal } from '../components/RepairRequestModal';
+import { trackGoal } from '../utils/analytics';
 
 const PLANS = [
   {
@@ -129,6 +130,15 @@ const BENEFITS = [
 const KyoceraRental = () => {
   const { open: openRepairModal } = useRepairRequestModal();
 
+  const requestWithGoal = (source) => () => {
+    trackGoal('rental_request_click', { source });
+    openRepairModal();
+  };
+
+  React.useEffect(() => {
+    trackGoal('rental_page_view');
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30">
       <Helmet>
@@ -220,9 +230,9 @@ const KyoceraRental = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button
-                    onClick={openRepairModal}
+                    onClick={requestWithGoal('hero')}
                     data-testid="rental-hero-cta-request"
-                    className="w-full sm:w-auto sm:min-w-[240px] justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 py-4 rounded-full text-[16px] font-semibold shadow-[0_8px_24px_-8px_rgba(37,99,235,0.6)] hover:shadow-[0_12px_28px_-8px_rgba(37,99,235,0.7)] transition-all duration-300 hover:-translate-y-0.5 group"
+                    className="w-full sm:w-auto sm:min-w-[240px] h-14 justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 rounded-full text-[16px] font-semibold shadow-[0_8px_24px_-8px_rgba(37,99,235,0.6)] hover:shadow-[0_12px_28px_-8px_rgba(37,99,235,0.7)] transition-all duration-300 hover:-translate-y-0.5 group"
                   >
                     Забронировать сейчас
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -230,7 +240,7 @@ const KyoceraRental = () => {
                   <a
                     href="#tariffs"
                     data-testid="rental-hero-scroll-tariffs"
-                    className="w-full sm:w-auto sm:min-w-[240px] inline-flex items-center justify-center border-2 border-blue-200 text-blue-600 hover:bg-blue-50/50 hover:border-blue-300 px-8 py-4 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
+                    className="w-full sm:w-auto sm:min-w-[240px] h-14 inline-flex items-center justify-center border-2 border-blue-200 text-blue-600 hover:bg-blue-50/50 hover:border-blue-300 px-8 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
                   >
                     Смотреть тарифы
                   </a>
@@ -342,7 +352,7 @@ const KyoceraRental = () => {
                   </ul>
 
                   <Button
-                    onClick={openRepairModal}
+                    onClick={requestWithGoal(`tariff-${plan.id}`)}
                     data-testid={`tariff-cta-${plan.id}`}
                     className={`w-full py-3 rounded-full font-semibold transition-all duration-300 ${
                       plan.popular
@@ -467,9 +477,9 @@ const KyoceraRental = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                   <Button
-                    onClick={openRepairModal}
+                    onClick={requestWithGoal('final-cta')}
                     data-testid="rental-final-cta-request"
-                    className="w-full sm:w-auto sm:min-w-[260px] justify-center bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 px-8 py-4 rounded-full text-[16px] font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 group"
+                    className="w-full sm:w-auto sm:min-w-[260px] h-14 justify-center bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 px-8 rounded-full text-[16px] font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 group"
                   >
                     Оставить заявку
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -477,7 +487,7 @@ const KyoceraRental = () => {
                   <a
                     href="tel:+79911857289"
                     data-testid="rental-final-cta-phone"
-                    className="w-full sm:w-auto sm:min-w-[260px] inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 px-8 py-4 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
+                    className="w-full sm:w-auto sm:min-w-[260px] h-14 inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 px-8 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
                   >
                     <Phone size={18} />
                     +7 (991) 185-72-89

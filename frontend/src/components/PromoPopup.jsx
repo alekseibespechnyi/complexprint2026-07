@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { X, Flame, Check, ArrowRight, Tag, Clock } from 'lucide-react';
+import { trackGoal } from '../utils/analytics';
 
 const STORAGE_KEY = 'cp_promo_popup_kyocera_v1';
 const SHOW_AFTER_MS = 3000;
@@ -20,6 +21,8 @@ const PromoPopup = () => {
       setIsOpen(true);
       // Триггер анимации появления на следующем кадре
       requestAnimationFrame(() => setVisible(true));
+      // Цель: попап показан
+      trackGoal('rental_popup_shown');
     }, SHOW_AFTER_MS);
 
     return () => clearTimeout(t);
@@ -38,11 +41,13 @@ const PromoPopup = () => {
   const close = () => {
     setVisible(false);
     try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) { /* ignore */ }
+    trackGoal('rental_popup_closed');
     setTimeout(() => setIsOpen(false), 250);
   };
 
   const handleCta = () => {
     try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) { /* ignore */ }
+    trackGoal('rental_popup_cta_click');
     setVisible(false);
     setTimeout(() => {
       setIsOpen(false);
