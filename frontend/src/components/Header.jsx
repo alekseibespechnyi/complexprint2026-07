@@ -235,6 +235,9 @@ const Header = () => {
                   <DropdownMenuItem onClick={() => goToPage('/arenda-kyocera-m2035dn')} className={dropdownItemCls}>
                     Аренда МФУ Kyocera M2035dn
                   </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => goToPage('/komputery-i-komplektuyushchie')} className={dropdownItemCls}>
+                    Компьютеры и комплектующие
+                  </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => goToPage('/remont-printerov-xerox')} className={dropdownItemCls}>
                     Ремонт Xerox
                   </DropdownMenuItem>
@@ -360,6 +363,7 @@ const Header = () => {
               {/* Услуги */}
               <div className="px-4 py-2 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Услуги</div>
               <button onClick={() => goToPage('/arenda-kyocera-m2035dn')} className="px-6 py-3 text-left font-montserrat font-semibold text-blue-600 hover:bg-blue-50 transition-colors duration-200">Аренда МФУ Kyocera M2035dn</button>
+              <button onClick={() => goToPage('/komputery-i-komplektuyushchie')} className="px-6 py-3 text-left font-montserrat font-semibold text-blue-600 hover:bg-blue-50 transition-colors duration-200">Компьютеры и комплектующие</button>
               <button onClick={() => goToPage('/remont-printerov-xerox')} className="px-6 py-3 text-left font-montserrat font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Ремонт Xerox</button>
               <button onClick={() => goToPage('/remont-printerov-hp')} className="px-6 py-3 text-left font-montserrat font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Ремонт HP</button>
               <button onClick={() => goToPage('/remont-printerov-canon')} className="px-6 py-3 text-left font-montserrat font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Ремонт Canon</button>

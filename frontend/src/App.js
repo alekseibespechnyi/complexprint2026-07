@@ -54,6 +54,7 @@ const Reviews = lazy(() => import("./pages/Reviews"));
 const MpsService = lazy(() => import("./pages/MpsService"));
 const PokopiynoeObsluzhivanie = lazy(() => import("./pages/PokopiynoeObsluzhivanie"));
 const KyoceraRental = lazy(() => import("./pages/KyoceraRental"));
+const ComputersAndParts = lazy(() => import("./pages/ComputersAndParts"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Лёгкий fallback пока чанк страницы скачивается
@@ -155,6 +156,7 @@ function App() {
               <Route path="/mps-autsorsing-pechati" element={<MpsService />} />
               <Route path="/pokopiynoe-obsluzhivanie" element={<PokopiynoeObsluzhivanie />} />
               <Route path="/arenda-kyocera-m2035dn" element={<KyoceraRental />} />
+              <Route path="/komputery-i-komplektuyushchie" element={<ComputersAndParts />} />
               {/* 404 - должен быть последним */}
               <Route path="*" element={<NotFound />} />
             </Routes>

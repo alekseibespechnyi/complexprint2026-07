@@ -14,7 +14,6 @@
 
 ## What's been implemented (Jun 28, 2026)
 - Новая страница `/arenda-kyocera-m2035dn` (`pages/KyoceraRental.jsx`):
-  - Hero c картинкой принтера, бейджем «-40%», 4 stat-плитки
   - Секция «Тарифы» — 3 карточки: Только аппарат (2 000₽/мес), Всё включено
     (3 500₽/мес, отмечен «ПОПУЛЯРНЫЙ»), Покопийная аренда (1 500₽ + 0,6₽/стр)
   - Технические характеристики (8 плиток, lucide-иконки)
@@ -36,6 +35,19 @@
 - Запуск окружения с нуля: установлены зависимости (yarn install,
   pip install -r requirements.txt), созданы `.env` файлы для backend
   (MONGO_URL, DB_NAME, ALLOWED_ORIGINS=*) и frontend (REACT_APP_BACKEND_URL)
+- Новая страница `/komputery-i-komplektuyushchie` (`pages/ComputersAndParts.jsx`):
+  - Hero «Компьютеры и комплектующие» + статы (5000+, 15+, РФ, B2B) +
+    мозаика из 4 категорий справа
+  - 6 категорий: Системные блоки, CPU Intel/AMD, Материнские платы,
+    SSD/HDD, Мониторы, Видеокарты и ОЗУ (запчасти для принтеров исключены
+    по запросу заказчика)
+  - 12 брендов: Intel, AMD, ASUS, Gigabyte, MSI, Acer, Lenovo, BenQ, Dell,
+    Seagate, Kingston, Crucial
+  - 8 преимуществ + 3 доп.услуги + B2B-блок (отсрочка, НДС, договор)
+  - JSON-LD Schema.org Service для SEO
+  - Цели аналитики: computers_page_view, computers_request_click(source)
+  - Ссылка в меню «Услуги» (desktop + mobile)
+  - sitemap.xml обновлён
 
 ## Core requirements (static)
 - Дизайн в едином стиле существующего сайта (синие/cyan градиенты,
