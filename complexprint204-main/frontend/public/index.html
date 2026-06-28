@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <!-- ============================================= -->
+        <!-- Favicons (iOS / Android / Browsers / PWA)    -->
+        <!-- ============================================= -->
+        <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml">
+        <link rel="alternate icon" href="%PUBLIC_URL%/favicon.ico" sizes="any">
+        <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+        <link rel="mask-icon" href="%PUBLIC_URL%/favicon.svg" color="#ec4899">
+        <meta name="apple-mobile-web-app-title" content="Комплекс Принт">
+        <meta name="application-name" content="Комплекс Принт">
+        <meta name="msapplication-TileColor" content="#ec4899">
+        <meta name="msapplication-TileImage" content="%PUBLIC_URL%/android-chrome-192x192.png">
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ec4899" />
+        <meta name="description" content="Комплекс Принт - Профессиональное обслуживание печатного оборудования в Москве. Ремонт и техническое обслуживание HP, Canon, Kyocera, Ricoh." />
+        <meta name="keywords" content="ремонт принтеров, обслуживание принтеров, ремонт МФУ, HP, Canon, Kyocera, Ricoh, Москва, печатное оборудование" />
+        <meta name="author" content="Комплекс Принт" />
+        
+        <!-- ============================================= -->
+        <!-- Яндекс.Метрика (отложенная загрузка) — noscript пиксель  -->
+        <!-- Сам скрипт инициализируется в конце body после взаимодействия пользователя -->
+        <!-- ============================================= -->
+        <noscript><div><img src="https://mc.yandex.ru/watch/105245584" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+        <!-- ============================================= -->
+        <!-- Preconnect к доменам аналитики (ускоряет последующую загрузку) -->
+        <!-- ============================================= -->
+        <link rel="preconnect" href="https://mc.yandex.ru" crossorigin>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+        <link rel="preconnect" href="https://us-assets.i.posthog.com" crossorigin>
+        <link rel="dns-prefetch" href="https://mc.yandex.ru">
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+        <link rel="dns-prefetch" href="https://us.i.posthog.com">
+
+        <!-- ============================================= -->
+        <!-- Google tag (gtag.js) — загружается отложенно   -->
+        <!-- Инициализация в конце body                     -->
+        <!-- ============================================= -->
+        <!-- /Google tag -->
+        
+        <!-- ============================================= -->
+        <!-- Микроразметка Schema.org - LocalBusiness     -->
+        <!-- ============================================= -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Комплекс Принт | Ремонт принтеров и МФУ",
+          "image": "https://complexprint.ru/favicon.svg",
+          "url": "https://complexprint.ru/",
+          "telephone": "+79911857289",
+          "priceRange": "От 1500₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Абрамцевская 11 к1 стр3",
+            "addressLocality": "Москва",
+            "postalCode": "127549",
+            "addressCountry": "RU"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "09:00",
+              "closes": "21:00"
+            }
+          ],
+          "areaServed": {
+            "@type": "City",
+            "name": "Москва"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "500"
+          }
+        }
+        </script>
+        <!-- /Микроразметка Schema.org -->
+
+        <!-- ============================================= -->
+        <!-- Микроразметка Schema.org - Services по брендам -->
+        <!-- ============================================= -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/remont-printerov-hp#service",
+              "name": "Ремонт принтеров и МФУ HP",
+              "alternateName": "Ремонт HP LaserJet, OfficeJet, DesignJet",
+              "url": "https://complexprint.ru/remont-printerov-hp",
+              "serviceType": "Ремонт принтеров HP",
+              "description": "Профессиональный ремонт принтеров и МФУ HP (Hewlett-Packard): LaserJet Pro, LaserJet Enterprise, Color LaserJet, OfficeJet, DesignJet. Выезд мастера, оригинальные запчасти, гарантия 6 месяцев.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "brand": { "@type": "Brand", "name": "HP" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "3000",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "RUB",
+                  "minPrice": "1500"
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/remont-printerov-canon#service",
+              "name": "Ремонт принтеров и МФУ Canon",
+              "alternateName": "Ремонт Canon i-SENSYS, imageRUNNER, imageCLASS, PIXMA",
+              "url": "https://complexprint.ru/remont-printerov-canon",
+              "serviceType": "Ремонт принтеров Canon",
+              "description": "Сервисное обслуживание и ремонт принтеров, МФУ и копиров Canon: i-SENSYS, imageCLASS, imageRUNNER ADVANCE, PIXMA, MAXIFY. Диагностика, чистка, замена узлов закрепления и фотобарабанов. Гарантия 6 месяцев.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "brand": { "@type": "Brand", "name": "Canon" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "3000",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "RUB",
+                  "minPrice": "1500"
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/remont-printerov-kyocera#service",
+              "name": "Ремонт принтеров и МФУ Kyocera",
+              "alternateName": "Ремонт Kyocera ECOSYS, TASKalfa",
+              "url": "https://complexprint.ru/remont-printerov-kyocera",
+              "serviceType": "Ремонт принтеров Kyocera",
+              "description": "Ремонт и обслуживание принтеров и МФУ Kyocera: серии ECOSYS, TASKalfa. Замена девелопера, барабана, термоплёнки, чистка узлов, прошивка. Оригинальные запчасти и гарантия 6 месяцев.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "brand": { "@type": "Brand", "name": "Kyocera" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "3000",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "RUB",
+                  "minPrice": "1500"
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/remont-printerov-ricoh#service",
+              "name": "Ремонт принтеров и МФУ Ricoh",
+              "alternateName": "Ремонт Ricoh Aficio, SP, MP",
+              "url": "https://complexprint.ru/remont-printerov-ricoh",
+              "serviceType": "Ремонт принтеров Ricoh",
+              "description": "Профессиональный ремонт лазерных принтеров и многофункциональных устройств Ricoh: Aficio, SP, MP. Диагностика, замена узлов, профилактика. Выезд по Москве и МО, гарантия 6 месяцев.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "brand": { "@type": "Brand", "name": "Ricoh" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "3000",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "RUB",
+                  "minPrice": "1500"
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/remont-printerov-konica-minolta#service",
+              "name": "Ремонт принтеров и МФУ Konica Minolta",
+              "alternateName": "Ремонт Konica Minolta bizhub",
+              "url": "https://complexprint.ru/remont-printerov-konica-minolta",
+              "serviceType": "Ремонт принтеров Konica Minolta",
+              "description": "Сервисное обслуживание и ремонт цветных и монохромных МФУ Konica Minolta bizhub. Замена узлов закрепления, переноса, фотобарабанов. Профессиональный сервис с гарантией 6 месяцев.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "brand": { "@type": "Brand", "name": "Konica Minolta" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "3000",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "RUB",
+                  "minPrice": "1500"
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/remont-printerov-xerox#service",
+              "name": "Ремонт принтеров и МФУ Xerox",
+              "alternateName": "Ремонт Xerox WorkCentre, Phaser, VersaLink, AltaLink",
+              "url": "https://complexprint.ru/remont-printerov-xerox",
+              "serviceType": "Ремонт принтеров Xerox",
+              "description": "Ремонт и обслуживание печатной техники Xerox: WorkCentre, Phaser, VersaLink, AltaLink, PrimeLink. Замена расходников, чистка, прошивка, диагностика. Гарантия 6 месяцев на все работы.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "brand": { "@type": "Brand", "name": "Xerox" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "3000",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "RUB",
+                  "minPrice": "1500"
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/abonentskoe-obsluzhivanie#service",
+              "name": "Комплексное абонентское обслуживание принтеров и МФУ",
+              "url": "https://complexprint.ru/abonentskoe-obsluzhivanie",
+              "serviceType": "Абонентское обслуживание печатной техники",
+              "description": "Ежемесячное обслуживание парка принтеров и МФУ для офисов и компаний. Включает профилактику, неограниченные выезды до решения проблемы, гарантированное наличие запчастей и приоритетную поддержку.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "1500",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "RUB",
+                  "price": "1500",
+                  "unitText": "MON",
+                  "referenceQuantity": {
+                    "@type": "QuantitativeValue",
+                    "value": "1",
+                    "unitCode": "MON"
+                  }
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            },
+            {
+              "@type": "Service",
+              "@id": "https://complexprint.ru/razovyy-remont#service",
+              "name": "Разовый ремонт принтеров и МФУ",
+              "url": "https://complexprint.ru/razovyy-remont",
+              "serviceType": "Разовый ремонт печатной техники",
+              "description": "Срочный выезд мастера для ремонта принтера или МФУ без долгосрочного договора. Диагностика на месте, прозрачная смета, оригинальные запчасти, гарантия 6 месяцев. Возможен выезд в день обращения.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Комплекс Принт",
+                "telephone": "+79911857289",
+                "url": "https://complexprint.ru/"
+              },
+              "areaServed": { "@type": "City", "name": "Москва" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "3000",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "RUB",
+                  "minPrice": "3000"
+                },
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          ]
+        }
+        </script>
+        <!-- /Микроразметка Schema.org - Services -->
+
+        <!-- ============================================= -->
+        <!-- Ссылки для AI-агрегаторов (llms.txt стандарт) -->
+        <!-- ============================================= -->
+        <link rel="alternate" type="text/markdown" title="LLM-friendly site overview" href="/llms.txt" />
+        <link rel="alternate" type="text/markdown" title="LLM-friendly full content" href="/llms-full.txt" />
+        <meta name="llms-txt" content="/llms.txt" />
+        <meta name="ai-content-declaration" content="indexable" />
+
+        <!-- ============================================= -->
+        <!-- Подтверждение для поисковых систем           -->
+        <!-- ============================================= -->
+        <meta name="yandex-verification" content="88d161eb2b7f14c6" />
+        <!-- Яндекс.Вебмастер: Вставьте сюда мета-тег подтверждения от Яндекса -->
+        <!-- Пример: <meta name="yandex-verification" content="ВАШ_КОД_ОТ_ЯНДЕКСА" /> -->
+        
+        <!-- Google Search Console: Вставьте сюда мета-тег подтверждения от Google -->
+        <!-- Пример: <meta name="google-site-verification" content="ВАШ_КОД_ОТ_GOOGLE" /> -->
+        <!-- ============================================= -->
+        
+        <!-- ============================================= -->
+        <!-- Open Graph / Facebook / Telegram / WhatsApp / VK -->
+        <!-- ============================================= -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Комплекс Принт" />
+        <meta property="og:locale" content="ru_RU" />
+        <meta property="og:title" content="Комплекс Принт — Ремонт и обслуживание принтеров и МФУ в Москве" />
+        <meta property="og:description" content="Профессиональный ремонт и абонентское обслуживание печатного оборудования HP, Canon, Kyocera, Ricoh, Konica Minolta, Xerox. Выезд мастера по Москве и МО. Гарантия 6 месяцев. ☎ +7 (991) 185-72-89" />
+        <meta property="og:url" content="https://complexprint.ru/" />
+        <meta property="og:image" content="https://complexprint.ru/og-image.jpg?v=2" />
+        <meta property="og:image:secure_url" content="https://complexprint.ru/og-image.jpg?v=2" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Комплекс Принт — Ремонт и обслуживание принтеров и МФУ в Москве" />
+
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://complexprint.ru/" />
+        <meta name="twitter:title" content="Комплекс Принт — Ремонт принтеров и МФУ в Москве" />
+        <meta name="twitter:description" content="Профессиональный ремонт принтеров HP, Canon, Kyocera, Ricoh. Выезд по Москве и МО, гарантия 6 месяцев. ☎ +7 (991) 185-72-89" />
+        <meta name="twitter:image" content="https://complexprint.ru/og-image.jpg?v=2" />
+        <meta name="twitter:image:alt" content="Комплекс Принт — Ремонт и обслуживание принтеров и МФУ в Москве" />
+
+        <!-- ВКонтакте (специфические теги) -->
+        <meta name="vk:image" content="https://complexprint.ru/og-image.jpg?v=2" />
+        
+        <!-- Google Fonts - Montserrat для навигации -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+        
+        <title>Комплекс Принт - Ремонт и обслуживание принтеров в Москве</title>
+    </head>
+    <body>
+        <!-- ============================================= -->
+        <!-- Расширенный noscript контент для SEO         -->
+        <!-- ============================================= -->
+        <noscript>
+            <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; line-height: 1.6;">
+                <header style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); color: white; padding: 30px 20px; border-radius: 12px; margin-bottom: 30px;">
+                    <h1 style="margin: 0 0 10px 0; font-size: 32px;">Ремонт и обслуживание принтеров в Москве</h1>
+                    <p style="margin: 0; font-size: 18px; opacity: 0.95;">Комплекс Принт — Профессиональное обслуживание печатного оборудования</p>
+                </header>
+                
+                <main>
+                    <section style="margin-bottom: 30px;">
+                        <h2 style="color: #1f2937; font-size: 28px; margin-bottom: 15px;">Наши услуги</h2>
+                        <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                            <h3 style="color: #ec4899; margin-top: 0;">Комплексное абонентское обслуживание — от 1500₽/месяц</h3>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Регулярное профилактическое обслуживание</li>
+                                <li>Неограниченное время ремонта до решения проблемы</li>
+                                <li>Гарантированное обслуживание и запчасти</li>
+                                <li>Приоритетная поддержка</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                            <h3 style="color: #8b5cf6; margin-top: 0;">Разовый ремонт — от 3000₽/выезд</h3>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Быстрая профессиональная диагностика</li>
+                                <li>Экспертный ремонт с оригинальными деталями</li>
+                                <li>Гарантия 6 месяцев на обслуживание</li>
+                                <li>Возможность обслуживания в день обращения</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f9fafb; padding: 20px; border-radius: 8px;">
+                            <h3 style="color: #059669; margin-top: 0;">Диагностика — от 1500₽</h3>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Включая выезд по Москве</li>
+                                <li>Первичная оценка по телефону</li>
+                                <li>Смета работ до начала ремонта</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <section style="margin-bottom: 30px;">
+                        <h2 style="color: #1f2937; font-size: 28px; margin-bottom: 15px;">Обслуживаемые бренды</h2>
+                        <p style="font-size: 18px; margin-bottom: 10px;">Мы специализируемся на ремонте и обслуживании следующих брендов:</p>
+                        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; list-style: none; padding: 0;">
+                            <li style="background: #f3f4f6; padding: 15px; border-radius: 8px; font-weight: 600;">✓ HP (Hewlett-Packard)</li>
+                            <li style="background: #f3f4f6; padding: 15px; border-radius: 8px; font-weight: 600;">✓ Canon</li>
+                            <li style="background: #f3f4f6; padding: 15px; border-radius: 8px; font-weight: 600;">✓ Kyocera</li>
+                            <li style="background: #f3f4f6; padding: 15px; border-radius: 8px; font-weight: 600;">✓ Ricoh</li>
+                            <li style="background: #f3f4f6; padding: 15px; border-radius: 8px; font-weight: 600;">✓ Konica Minolta</li>
+                            <li style="background: #f3f4f6; padding: 15px; border-radius: 8px; font-weight: 600;">✓ Xerox</li>
+                        </ul>
+                    </section>
+                    
+                    <section style="background: #fef3c7; padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 4px solid #f59e0b;">
+                        <h2 style="color: #92400e; margin-top: 0; font-size: 24px;">Наши преимущества</h2>
+                        <ul style="margin: 0; padding-left: 20px; color: #78350f;">
+                            <li><strong>Выезд по Москве и МО:</strong> работаем во всех районах столицы</li>
+                            <li><strong>Гарантия 6 месяцев:</strong> на все виды ремонтных работ</li>
+                            <li><strong>Оригинальные запчасти:</strong> используем только качественные комплектующие</li>
+                            <li><strong>Опыт более 15 лет:</strong> обслужили более 500 клиентов</li>
+                            <li><strong>Работа 24/7:</strong> принимаем заявки круглосуточно</li>
+                        </ul>
+                    </section>
+                    
+                    <section style="margin-bottom: 30px;">
+                        <h2 style="color: #1f2937; font-size: 28px; margin-bottom: 15px;">Контактная информация</h2>
+                        <div style="background: #f9fafb; padding: 25px; border-radius: 8px;">
+                            <p style="margin: 10px 0; font-size: 18px;"><strong>Телефон:</strong> <a href="tel:+79911857289" style="color: #ec4899; text-decoration: none;">+7 (991) 185-72-89</a></p>
+                            <p style="margin: 10px 0; font-size: 18px;"><strong>Email:</strong> <a href="mailto:info@complexprint.ru" style="color: #ec4899; text-decoration: none;">info@complexprint.ru</a></p>
+                            <p style="margin: 10px 0; font-size: 18px;"><strong>Адрес:</strong> Москва, Абрамцевская 11 к1 стр3, 127549</p>
+                            <p style="margin: 10px 0; font-size: 18px;"><strong>Часы работы:</strong> Понедельник-Воскресенье: 09:00-21:00</p>
+                            <p style="margin: 10px 0; font-size: 18px;"><strong>Область обслуживания:</strong> Москва и Московская область</p>
+                        </div>
+                    </section>
+                    
+                    <section style="background: #dbeafe; padding: 25px; border-radius: 12px; border-left: 4px solid #3b82f6;">
+                        <h2 style="color: #1e40af; margin-top: 0; font-size: 24px;">Как вызвать мастера</h2>
+                        <ol style="margin: 0; padding-left: 20px; color: #1e3a8a;">
+                            <li style="margin-bottom: 10px;"><strong>Позвоните нам</strong> по телефону +7 (991) 185-72-89 или оставьте заявку на сайте</li>
+                            <li style="margin-bottom: 10px;"><strong>Опишите проблему</strong> — наш специалист проведет первичную диагностику</li>
+                            <li style="margin-bottom: 10px;"><strong>Согласуйте время визита</strong> — выезд возможен в день обращения</li>
+                            <li style="margin-bottom: 10px;"><strong>Мастер проведет диагностику</strong> на месте и озвучит стоимость ремонта</li>
+                            <li style="margin-bottom: 10px;"><strong>После вашего согласия</strong> выполним ремонт с гарантией 6 месяцев</li>
+                        </ol>
+                    </section>
+                </main>
+                
+                <footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #e5e7eb; text-align: center; color: #6b7280;">
+                    <p style="margin: 5px 0;">&copy; 2025 Комплекс Принт. Все права защищены.</p>
+                    <p style="margin: 5px 0;">Для полного функционала сайта включите JavaScript в вашем браузере.</p>
+                </footer>
+            </div>
+        </noscript>
+        <!-- /noscript -->
+        <div id="root"></div>
+        <a
+            id="help-button"
+            href="/#repair-request"
+            style="
+                display: flex !important;
+                align-items: center !important;
+                position: fixed !important;
+                bottom: 20px;
+                right: 20px;
+                text-decoration: none;
+                padding: 10px 16px;
+                font-family: -apple-system, BlinkMacSystemFont,
+                    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                    'Open Sans', 'Helvetica Neue',
+                    sans-serif !important;
+                font-size: 14px !important;
+                font-weight: 600 !important;
+                z-index: 9999 !important;
+                box-shadow: 0 4px 16px rgba(236, 72, 153, 0.3) !important;
+                border-radius: 12px !important;
+                background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%) !important;
+                color: #ffffff !important;
+                transition: all 0.3s ease !important;
+                border: none !important;
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(236, 72, 153, 0.4)'"
+            onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 16px rgba(236, 72, 153, 0.3)'"
+        >
+            <div
+                style="display: flex; flex-direction: row; align-items: center"
+            >
+                <svg
+                    style="width: 20px; height: 20px; margin-right: 8px; fill: currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <span>Получить помощь</span>
+            </div>
+        </a>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const helpButton = document.getElementById('help-button');
+                if (!helpButton) return;
+                helpButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Пробуем достучаться до React-обработчика (умный скролл с поддержкой
+                    // lazy-секций). Если React ещё не загрузился — фоллбек на нативный
+                    // переход с hash.
+                    var handled = false;
+                    try {
+                        var ev = new CustomEvent('app:scroll-to-repair-request');
+                        window.dispatchEvent(ev);
+                        handled = !!window.__appScrollToRepairRequestReady;
+                    } catch (err) { /* noop */ }
+                    if (!handled) {
+                        if (window.location.pathname !== '/') {
+                            window.location.href = '/#repair-request';
+                        } else {
+                            var el = document.getElementById('repair-request');
+                            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        </script>
+        <!-- ============================================= -->
+        <!-- ОТЛОЖЕННЫЙ ЗАГРУЗЧИК АНАЛИТИКИ                       -->
+        <!-- Запускает Яндекс.Метрику, Google Analytics и PostHog -->
+        <!-- после первого взаимодействия пользователя ИЛИ через  -->
+        <!-- 3.5 секунды (что наступит раньше). Это снижает Total -->
+        <!-- Blocking Time на ~250-400 мс.                        -->
+        <!-- ============================================= -->
+        <script>
+        (function () {
+            var started = false;
+            var IDLE_TIMEOUT = 3500; // ms — fallback, если нет взаимодействия
+
+            function startAnalytics() {
+                if (started) return;
+                started = true;
+
+                // Отписываемся от слушателей
+                ['scroll','mousedown','mousemove','touchstart','keydown','wheel','pointerdown'].forEach(function(ev){
+                    window.removeEventListener(ev, startAnalytics, { passive: true, capture: true });
+                });
+
+                // -------- Яндекс.Метрика (с webvisor) --------
+                try {
+                    (function(m,e,t,r,i,k,a){
+                        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                        m[i].l=1*new Date();
+                        for (var j = 0; j < document.scripts.length; j++) {
+                            if (document.scripts[j].src === r) { return; }
+                        }
+                        k=e.createElement(t);
+                        a=e.getElementsByTagName(t)[0];
+                        k.async=1;
+                        k.src=r;
+                        a.parentNode.insertBefore(k,a);
+                    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=105245584', 'ym');
+
+                    window.ym(105245584, 'init', {
+                        webvisor: true,
+                        clickmap: true,
+                        ecommerce: "dataLayer",
+                        accurateTrackBounce: true,
+                        trackLinks: true
+                    });
+                } catch (e) { /* noop */ }
+
+                // -------- Google Analytics (gtag) --------
+                try {
+                    var gaScript = document.createElement('script');
+                    gaScript.async = true;
+                    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-CQHCL9ZBS8';
+                    document.head.appendChild(gaScript);
+
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ window.dataLayer.push(arguments); }
+                    window.gtag = gtag;
+                    gtag('js', new Date());
+                    gtag('config', 'G-CQHCL9ZBS8');
+                } catch (e) { /* noop */ }
+
+                // -------- PostHog --------
+                try {
+                    !(function (t, e) {
+                        var o, n, p, r;
+                        e.__SV ||
+                            ((window.posthog = e),
+                            (e._i = []),
+                            (e.init = function (i, s, a) {
+                                function g(t, e) {
+                                    var o = e.split(".");
+                                    2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                        (t[e] = function () {
+                                            t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                                        });
+                                }
+                                ((p = t.createElement("script")).type = "text/javascript"),
+                                    (p.crossOrigin = "anonymous"),
+                                    (p.async = !0),
+                                    (p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js"),
+                                    (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                                var u = e;
+                                for (
+                                    void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                        u.people = u.people || [],
+                                        u.toString = function (t) {
+                                            var e = "posthog";
+                                            return ("posthog" !== a && (e += "." + a), t || (e += " (stub)"), e);
+                                        },
+                                        u.people.toString = function () { return u.toString(1) + ".people (stub)"; },
+                                        o = "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(" "),
+                                        n = 0;
+                                    n < o.length;
+                                    n++
+                                ) g(u, o[n]);
+                                e._i.push([i, s, a]);
+                            }),
+                            (e.__SV = 1));
+                    })(document, window.posthog || []);
+                    window.posthog.init("phc_yJW1VjHGGwmCbbrtczfqqNxgBDbhlhOWcdzcIJEOTFE", {
+                        api_host: "https://us.i.posthog.com",
+                        person_profiles: "identified_only"
+                    });
+                } catch (e) { /* noop */ }
+            }
+
+            // Триггеры запуска: первое взаимодействие пользователя
+            ['scroll','mousedown','mousemove','touchstart','keydown','wheel','pointerdown'].forEach(function(ev){
+                window.addEventListener(ev, startAnalytics, { once: true, passive: true, capture: true });
+            });
+
+            // Fallback: гарантированная МИНИМАЛЬНАЯ задержка перед запуском.
+            // setTimeout 3500мс — точно после LCP/TBT окна, чтобы PageSpeed/Lighthouse
+            // не учли аналитику как блокирующую. Затем — ждём idle, чтобы запуститься
+            // когда браузер свободен (не блокируем прокрутку и пр.).
+            setTimeout(function () {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(startAnalytics, { timeout: 2000 });
+                } else {
+                    startAnalytics();
+                }
+            }, IDLE_TIMEOUT);
+
+            // Гарантия: при выгрузке страницы — всё-таки попытаться отправить хотя бы pageview
+            // (важно для пользователей, которые закрыли вкладку до взаимодействия)
+            window.addEventListener('pagehide', startAnalytics, { once: true, capture: true });
+        })();
+        </script>
+    </body>
+</html>

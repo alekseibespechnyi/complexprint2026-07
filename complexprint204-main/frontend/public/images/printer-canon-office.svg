@@ -1,0 +1,15 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <rect x="50" y="90" width="300" height="160" rx="8" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="70" y="110" width="260" height="100" fill="#f1f3f4"/>
+  <rect x="140" y="135" width="120" height="50" fill="#dc3545"/>
+  <text x="200" y="165" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">CANON</text>
+  <text x="200" y="280" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="14">Canon imageRUNNER</text>
+  
+  <!-- Display panel -->
+  <rect x="280" y="120" width="60" height="40" fill="#000000"/>
+  <rect x="285" y="125" width="50" height="30" fill="#28a745"/>
+  
+  <!-- Paper output -->
+  <rect x="80" y="220" width="240" height="15" fill="#e9ecef"/>
+</svg>

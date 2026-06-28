@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90" role="img" aria-label="Canon">
+  <rect width="200" height="90" fill="#ffffff" rx="6"/>
+  <text x="100" y="60" text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="48" font-weight="700" fill="#CC0000"
+        font-style="italic" letter-spacing="-1.5">Canon</text>
+</svg>

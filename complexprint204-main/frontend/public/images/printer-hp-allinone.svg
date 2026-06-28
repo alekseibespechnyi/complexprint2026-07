@@ -1,0 +1,15 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <rect x="50" y="80" width="300" height="180" rx="10" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="70" y="100" width="260" height="120" fill="#e9ecef"/>
+  <rect x="150" y="130" width="100" height="60" fill="#6c757d"/>
+  <text x="200" y="165" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">HP</text>
+  <text x="200" y="280" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="14">МФУ HP LaserJet Pro</text>
+  
+  <!-- Scanner part -->
+  <rect x="70" y="70" width="260" height="30" rx="5" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="80" y="75" width="240" height="20" fill="#f8f9fa"/>
+  
+  <!-- Paper tray -->
+  <rect x="80" y="230" width="240" height="20" fill="#dee2e6"/>
+</svg>

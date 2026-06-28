@@ -1,0 +1,17 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <rect x="40" y="70" width="320" height="180" rx="10" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="60" y="90" width="280" height="130" fill="#e9ecef"/>
+  <rect x="130" y="120" width="140" height="70" fill="#007bff"/>
+  <text x="200" y="160" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">KYOCERA</text>
+  <text x="200" y="280" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="14">Kyocera ECOSYS</text>
+  
+  <!-- Control panel -->
+  <rect x="300" y="100" width="50" height="60" fill="#343a40"/>
+  <circle cx="325" cy="115" r="8" fill="#17a2b8"/>
+  <circle cx="325" cy="135" r="8" fill="#ffc107"/>
+  <circle cx="325" cy="155" r="8" fill="#28a745"/>
+  
+  <!-- Paper trays -->
+  <rect x="70" y="230" width="260" height="15" fill="#ced4da"/>
+</svg>

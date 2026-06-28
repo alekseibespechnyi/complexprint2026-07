@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90" role="img" aria-label="Xerox">
+  <rect width="220" height="90" fill="#ffffff" rx="6"/>
+  <circle cx="42" cy="45" r="26" fill="#CC092F"/>
+  <path d="M30 33 L54 57 M54 33 L30 57" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <text x="82" y="62" text-anchor="start"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="38" font-weight="700" fill="#CC092F"
+        letter-spacing="-1">xerox</text>
+</svg>
