@@ -36,42 +36,42 @@ const CATEGORIES = [
     title: 'Системные блоки и моноблоки',
     text: 'Готовые офисные ПК, моноблоки и рабочие станции под любые задачи: офис, бухгалтерия, проектирование, графика.',
     image: '/images/pc-workstation.png',
-    imgClass: 'object-contain bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900',
+    fit: 'contain',
   },
   {
     Icon: Cpu,
     title: 'Процессоры Intel и AMD',
     text: 'Полная линейка CPU: от Intel Core i3 до Xeon, от AMD Ryzen 3 до Threadripper. Подбор под материнскую плату.',
     image: '/images/pc-cpu-intel-amd.webp',
-    imgClass: 'object-cover',
+    fit: 'cover',
   },
   {
     Icon: CircuitBoard,
     title: 'Материнские платы',
     text: 'Платы Gigabyte, ASUS, MSI и ASRock для всех современных сокетов. Гарантия совместимости с CPU и RAM.',
     image: '/images/pc-motherboard.webp',
-    imgClass: 'object-contain bg-gradient-to-br from-slate-100 to-slate-200',
+    fit: 'contain',
   },
   {
     Icon: HardDrive,
     title: 'SSD и HDD накопители',
     text: 'NVMe и SATA SSD до 8 ТБ, серверные и десктопные HDD Seagate, WD. Резервное копирование «под ключ».',
     image: '/images/pc-ssd.avif',
-    imgClass: 'object-cover',
+    fit: 'cover',
   },
   {
     Icon: Monitor,
     title: 'Мониторы',
     text: 'Офисные и профессиональные мониторы BenQ, Acer, Lenovo, Dell. Диагонали 22"–34", IPS, 4K, изогнутые.',
     image: '/images/pc-monitor.webp',
-    imgClass: 'object-cover',
+    fit: 'cover',
   },
   {
     Icon: MemoryStick,
     title: 'Видеокарты и оперативная память',
     text: 'GPU NVIDIA и AMD для офиса, дизайнеров и инженеров. DDR4/DDR5 от Kingston, Crucial, Corsair.',
     image: '/images/pc-videocard.avif',
-    imgClass: 'object-cover',
+    fit: 'cover',
   },
 ];
 
@@ -325,32 +325,46 @@ const ComputersAndParts = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {CATEGORIES.map(({ Icon, title, text, image, imgClass }) => (
+              {CATEGORIES.map(({ Icon, title, text, image, fit }) => (
                 <div
                   key={title}
                   data-testid={`category-card-${title}`}
                   className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-[0_4px_20px_-8px_rgba(2,6,23,0.06)] hover:shadow-[0_20px_50px_-15px_rgba(37,99,235,0.25)] hover:-translate-y-1 transition-all duration-300 flex flex-col"
                 >
-                  {image ? (
-                    <div className="relative h-48 overflow-hidden bg-slate-50">
-                      <img
-                        src={image}
-                        alt={title}
-                        loading="lazy"
-                        decoding="async"
-                        className={`absolute inset-0 w-full h-full ${imgClass || 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
-                      />
-                      <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-md">
-                        <Icon size={18} className="text-blue-600" />
-                      </div>
+                  {/* Unified image block — same dark bg, same overlay, same icon position */}
+                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    {/* Decorative grid pattern */}
+                    <div
+                      className="absolute inset-0 opacity-[0.07]"
+                      style={{
+                        backgroundImage:
+                          'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+                        backgroundSize: '24px 24px',
+                      }}
+                    />
+                    {/* Soft accent glow */}
+                    <div className="absolute -top-12 -right-12 w-44 h-44 bg-blue-500/20 rounded-full blur-3xl" />
+                    <div className="absolute -bottom-12 -left-12 w-44 h-44 bg-cyan-500/15 rounded-full blur-3xl" />
+
+                    <img
+                      src={image}
+                      alt={title}
+                      loading="lazy"
+                      decoding="async"
+                      className={`absolute inset-0 w-full h-full ${
+                        fit === 'contain' ? 'object-contain p-5' : 'object-cover'
+                      } group-hover:scale-105 transition-transform duration-500`}
+                    />
+
+                    {/* Bottom fade for text legibility consistency */}
+                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-900/80 to-transparent pointer-events-none" />
+
+                    {/* Icon badge — same position for all */}
+                    <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-md z-10">
+                      <Icon size={18} className="text-blue-600" />
                     </div>
-                  ) : (
-                    <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 flex items-center justify-center">
-                      <Icon size={64} className="text-white/95 drop-shadow-lg" strokeWidth={1.4} />
-                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
-                      <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-cyan-200/20 rounded-full blur-2xl" />
-                    </div>
-                  )}
+                  </div>
+
                   <div className="p-7 flex-1 flex flex-col">
                     <h4 className="font-bold text-slate-900 text-lg mb-2">{title}</h4>
                     <p className="text-[14px] text-slate-600 leading-relaxed">{text}</p>
