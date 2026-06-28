@@ -27,6 +27,7 @@ const EquipmentSection = lazy(() => import("./components/EquipmentSection"));
 const AboutSection = lazy(() => import("./components/AboutSection"));
 const RepairRequestForm = lazy(() => import("./components/RepairRequestForm"));
 const Footer = lazy(() => import("./components/Footer"));
+const PromoPopup = lazy(() => import("./components/PromoPopup"));
 
 // ── Lazy-loading всех роутов ────────────────────────────────────────────────
 // Каждая страница теперь грузится отдельным чанком только при переходе на неё.
@@ -52,6 +53,7 @@ const Contacts = lazy(() => import("./pages/Contacts"));
 const Reviews = lazy(() => import("./pages/Reviews"));
 const MpsService = lazy(() => import("./pages/MpsService"));
 const PokopiynoeObsluzhivanie = lazy(() => import("./pages/PokopiynoeObsluzhivanie"));
+const KyoceraRental = lazy(() => import("./pages/KyoceraRental"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Лёгкий fallback пока чанк страницы скачивается
@@ -115,6 +117,9 @@ const Home = () => {
       <LazyLoad placeholder={<SectionPlaceholder height="300px" />} minHeight="300px">
         <Footer />
       </LazyLoad>
+      <Suspense fallback={null}>
+        <PromoPopup />
+      </Suspense>
     </div>
   );
 };
@@ -149,6 +154,7 @@ function App() {
               <Route path="/reviews" element={<Reviews />} />
               <Route path="/mps-autsorsing-pechati" element={<MpsService />} />
               <Route path="/pokopiynoe-obsluzhivanie" element={<PokopiynoeObsluzhivanie />} />
+              <Route path="/arenda-kyocera-m2035dn" element={<KyoceraRental />} />
               {/* 404 - должен быть последним */}
               <Route path="*" element={<NotFound />} />
             </Routes>
