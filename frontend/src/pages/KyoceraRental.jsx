@@ -222,7 +222,7 @@ const KyoceraRental = () => {
                   <Button
                     onClick={openRepairModal}
                     data-testid="rental-hero-cta-request"
-                    className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 py-4 rounded-full text-[16px] font-semibold shadow-[0_8px_24px_-8px_rgba(37,99,235,0.6)] hover:shadow-[0_12px_28px_-8px_rgba(37,99,235,0.7)] transition-all duration-300 hover:-translate-y-0.5 group"
+                    className="w-full sm:w-auto sm:min-w-[240px] justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 py-4 rounded-full text-[16px] font-semibold shadow-[0_8px_24px_-8px_rgba(37,99,235,0.6)] hover:shadow-[0_12px_28px_-8px_rgba(37,99,235,0.7)] transition-all duration-300 hover:-translate-y-0.5 group"
                   >
                     Забронировать сейчас
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -230,7 +230,7 @@ const KyoceraRental = () => {
                   <a
                     href="#tariffs"
                     data-testid="rental-hero-scroll-tariffs"
-                    className="inline-flex items-center justify-center border-2 border-blue-200 text-blue-600 hover:bg-blue-50/50 hover:border-blue-300 px-8 py-4 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
+                    className="w-full sm:w-auto sm:min-w-[240px] inline-flex items-center justify-center border-2 border-blue-200 text-blue-600 hover:bg-blue-50/50 hover:border-blue-300 px-8 py-4 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
                   >
                     Смотреть тарифы
                   </a>
@@ -254,7 +254,7 @@ const KyoceraRental = () => {
                   <div className="absolute -top-4 -right-4 bg-gradient-to-br from-red-500 to-rose-500 text-white px-4 py-3 rounded-2xl shadow-[0_8px_24px_-8px_rgba(244,63,94,0.6)]">
                     <div className="text-center">
                       <div className="text-[11px] font-medium opacity-90">Акция</div>
-                      <div className="text-lg font-bold leading-tight">−40%</div>
+                      <div className="text-lg font-bold leading-tight">−25%</div>
                     </div>
                   </div>
 
@@ -469,7 +469,7 @@ const KyoceraRental = () => {
                   <Button
                     onClick={openRepairModal}
                     data-testid="rental-final-cta-request"
-                    className="bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 px-8 py-4 rounded-full text-[16px] font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 group"
+                    className="w-full sm:w-auto sm:min-w-[260px] justify-center bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 px-8 py-4 rounded-full text-[16px] font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 group"
                   >
                     Оставить заявку
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -477,7 +477,7 @@ const KyoceraRental = () => {
                   <a
                     href="tel:+79911857289"
                     data-testid="rental-final-cta-phone"
-                    className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 px-8 py-4 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
+                    className="w-full sm:w-auto sm:min-w-[260px] inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 px-8 py-4 rounded-full text-[16px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
                   >
                     <Phone size={18} />
                     +7 (991) 185-72-89

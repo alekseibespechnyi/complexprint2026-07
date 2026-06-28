@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { X, Sparkles, Check, ArrowRight, Tag } from 'lucide-react';
+import { X, Flame, Check, ArrowRight, Tag, Clock } from 'lucide-react';
 
 const STORAGE_KEY = 'cp_promo_popup_kyocera_v1';
 const SHOW_AFTER_MS = 3000;
@@ -94,7 +94,7 @@ const PromoPopup = () => {
             {/* Discount badge */}
             <div className="absolute top-4 left-4 z-10 bg-red-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-lg flex items-center gap-1.5">
               <Tag size={12} />
-              −40%
+              −22%
             </div>
 
             <img
@@ -108,34 +108,33 @@ const PromoPopup = () => {
 
           {/* Right: Content */}
           <div className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-white to-blue-50/40">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-[12px] font-semibold mb-4">
-              <Sparkles size={12} className="text-red-500" />
-              Только 40 устройств
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white text-[12px] font-bold mb-4 shadow-sm">
+              <Flame size={12} />
+              АКЦИЯ
             </div>
 
             <h2
               id="promo-popup-title"
               className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight tracking-tight"
             >
-              Аренда МФУ{' '}
+              Аренда принтеров{' '}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                Kyocera M2035dn
+                от 2 000 ₽/мес.
               </span>
             </h2>
 
             <p className="text-slate-600 text-[15px] leading-relaxed mt-3">
-              Освобождаем 40 проверенных МФУ. Берите в аренду в Москве —
-              <strong className="text-slate-800"> от 1 500 ₽/мес.</strong>
+              Освободилось <strong className="text-slate-900">40 штук</strong> МФУ
+              Kyocera ECOSYS M2035dn
             </p>
 
             <ul className="mt-5 space-y-2.5">
               {[
-                'С обслуживанием и без — 3 тарифа',
-                'Картриджи и ремонт включены (по тарифу)',
-                'Доставка и установка бесплатно',
-                'Подмена при поломке за 24 часа',
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-2.5">
+                <>Доставка и установка — <strong>бесплатно</strong></>,
+                <>Картриджи и ремонт — <strong>включены</strong></>,
+                <>Подмена при поломке — <strong>24 часа</strong></>,
+              ].map((t, i) => (
+                <li key={i} className="flex items-start gap-2.5">
                   <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
                     <Check size={12} className="text-emerald-600" strokeWidth={3} />
                   </span>
@@ -144,13 +143,31 @@ const PromoPopup = () => {
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-3 mt-6">
+            {/* Price block */}
+            <div className="mt-5 p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50/50 border border-blue-100">
+              <div className="flex items-baseline gap-3 flex-wrap">
+                <span className="text-slate-400 line-through text-[16px]">4 500 ₽</span>
+                <span className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  3 500 ₽<span className="text-base text-slate-600 font-medium">/мес.</span>
+                </span>
+              </div>
+              <p className="text-[12px] text-slate-500 mt-1">
+                по тарифу «Всё включено»
+              </p>
+            </div>
+
+            <p className="inline-flex items-center gap-1.5 mt-4 text-[13px] text-red-600 font-semibold">
+              <Clock size={13} />
+              Осталось <strong>40</strong> аппаратов
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 mt-5">
               <button
                 onClick={handleCta}
                 data-testid="promo-popup-cta"
                 className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-5 py-3 rounded-full text-[15px] font-semibold shadow-[0_8px_24px_-8px_rgba(37,99,235,0.6)] hover:shadow-[0_12px_28px_-8px_rgba(37,99,235,0.7)] transition-all duration-300 hover:-translate-y-0.5 group"
               >
-                Смотреть тарифы
+                Забронировать сейчас
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button
@@ -163,7 +180,7 @@ const PromoPopup = () => {
             </div>
 
             <p className="text-[11px] text-slate-400 mt-4">
-              Акция действует до конца месяца. Только для юрлиц и ИП в Москве и МО.
+              Работаем с юрлицами и ИП. Официальный договор, безналичный расчёт.
             </p>
           </div>
         </div>

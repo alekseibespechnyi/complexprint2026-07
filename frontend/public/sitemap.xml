@@ -13,6 +13,16 @@
 
   <!-- Основные услуги -->
   <url>
+    <loc>https://complexprint.ru/arenda-kyocera-m2035dn</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://complexprint.ru/images/Kyocera-ECOSYS-M2035dn.webp</image:loc>
+      <image:title>Аренда МФУ Kyocera ECOSYS M2035dn в Москве</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://complexprint.ru/abonentskoe-obsluzhivanie</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
